@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Juan Tuandali / 2172034">
+    <title>Soal 4</title>
+
+    <style>
+       
+       .screen{
+           margin: 0;
+           padding: 0;
+           background-color: rgb(190, 190, 184);
+           height: 100vh;
+           display: flex;
+       }
+        
+        #cursor{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.637);
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            background-color: rgb(98, 195, 195);
+
+           
+        }
+    </style>
+</head>
+<body class="screen">
+    
+        <div id="cursor"></div>
+
+        <script>
+           let cursor = document.getElementById('cursor');
+            document.addEventListener('mousemove' , function(a){
+                let x = a.clientX;
+                let y = a.clientY;
+                cursor.style.left = x + "px";
+                cursor.style.top = y + "px";
+            })
+        </script>
+
+</body>
+</html>
